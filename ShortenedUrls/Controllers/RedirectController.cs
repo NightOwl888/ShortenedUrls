@@ -18,7 +18,7 @@ namespace ShortenedUrls.Controllers
         public IActionResult GoToFull(int id)
         {
             var link = dbContext.Links.FirstOrDefault(x => x.Id == id);
-            return new RedirectResult(link.FullLink, true);
+            return new RedirectResult(link.FullLink);
         }
     }
 }
